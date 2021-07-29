@@ -8656,6 +8656,7 @@ function generateReport(params) {
             auth: params.token
         });
         const orgs = yield getOrgsForEnterprise(params.enterprise, octokit);
+        return orgs;
         const members = yield getMembersFromOrgs(orgs, octokit);
         const outsideCollaborators = yield getOutsideCollaborators(params.enterprise, octokit);
         const pendingInvites = yield getPendingInvitesFromOrgs(orgs, octokit);
