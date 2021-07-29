@@ -8656,7 +8656,8 @@ function generateReport(params) {
             auth: params.token
         });
         const orgs = yield getOrgsForEnterprise(params.enterprise, octokit);
-        return orgs;
+        console.log('---------orgs---------');
+        console.log(orgs);
         const members = yield getMembersFromOrgs(orgs, octokit);
         const outsideCollaborators = yield getOutsideCollaborators(params.enterprise, octokit);
         const pendingInvites = yield getPendingInvitesFromOrgs(orgs, octokit);
@@ -8758,7 +8759,7 @@ var main_awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arg
 
 
 function run() {
-  cnsole.log("Running")
+  console.log("Running")
   return main_awaiter(this, void 0, void 0, function* () {
         try {
             const token = core.getInput('token', { required: true });
