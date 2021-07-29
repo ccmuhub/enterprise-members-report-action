@@ -8,7 +8,9 @@ require('./sourcemap-register.js');/******/ (() => { // webpackBootstrap
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { 
+      
+      m[k]; } });
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -8755,6 +8757,7 @@ var main_awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arg
 
 
 function run() {
+    return true;
     return main_awaiter(this, void 0, void 0, function* () {
         try {
             const token = core.getInput('token', { required: true });
