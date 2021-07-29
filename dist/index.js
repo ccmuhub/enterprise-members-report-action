@@ -8758,8 +8758,8 @@ var main_awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arg
 
 
 function run() {
-    return true;
-    return main_awaiter(this, void 0, void 0, function* () {
+  cnsole.log("Running")
+  return main_awaiter(this, void 0, void 0, function* () {
         try {
             const token = core.getInput('token', { required: true });
             const enterprise = core.getInput('enterprise', { required: true });
