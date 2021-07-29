@@ -8655,7 +8655,8 @@ function generateReport(params) {
         const octokit = new dist_node/* Octokit */.v({
             auth: params.token
         });
-        const orgs = yield getOrgsForEnterprise(params.enterprise, octokit);
+        //const orgs = yield getOrgsForEnterprise(params.enterprise, octokit);
+        const orgs = [ 'WPPOpen','uhub-biz','Hogarth-Worldwide']
         console.log('---------orgs---------');
         console.log(orgs);
         const members = yield getMembersFromOrgs(orgs, octokit);
